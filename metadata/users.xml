@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users xmlns="http://www.demandware.com/xml/impex/user/2007-09-05">
+    <user login="zamfir.mihaela.andreea@gmail.com" enabled-flag="true">
+        <credentials>
+            <external-id>0b00db56-ed6d-414d-8d06-43663817ba8e</external-id>
+        </credentials>
+        <profile>
+            <first-name>Mihaela</first-name>
+            <last-name>Zamfir</last-name>
+            <email>zamfir.mihaela.andreea@gmail.com</email>
+        </profile>
+    </user>
+
+</users>

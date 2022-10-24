@@ -1,0 +1,40 @@
+<isdecorate template="common/layout/page">
+    <h1>
+        <isprint value="${pdict.title}" encoding="htmlcontent" />
+    </h1>
+    <form action="${pdict.actionUrl}" class="registration" method="POST" name="${pdict.profileForm.htmlName}">
+        <div class="form-group
+        <isif condition=" ${!!pdict.profileForm.customer.firstname.mandatory === true}">required</isif>">
+            <label class="form-control-label" for="firstname">First Name
+                <isprint value="${pdict.profileForm.customer.firstname.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="firstname" <isprint
+                value=${pdict.profileForm.customer.firstname.attributes} encoding="off" />>
+            <div class="invalid-feedback" id="form-fname-error"></div>
+        </div>
+
+        <div class="form-group
+        <isif condition=" ${!!pdict.profileForm.customer.lastname.mandatory === true}">required</isif>">
+            <label class="form-control-label" for="lastname">Last Name
+                <isprint value="${pdict.profileForm.customer.lastname.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="lastname" <isprint
+                value=${pdict.profileForm.customer.lastname.attributes} encoding="off" />>
+            <div class="invalid-feedback" id="form-lname-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label class=" form-control-label" for="email">Email
+                <isprint value="${pdict.profileForm.customer.email.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="email" <isprint
+                value=${pdict.profileForm.customer.email.attributes} encoding="off" />>
+        </div>
+
+        <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+
+        <button type="submit" class="btn btn-block btn-primary">Submit
+            ${Resource.msg('button.createaccount.registration', 'registration', null)}
+        </button>
+    </form>
+</isdecorate>

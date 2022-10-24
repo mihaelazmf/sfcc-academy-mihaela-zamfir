@@ -1,0 +1,29 @@
+<iscomment>
+    <isset name="sessionVar" value="${1}" scope="session" />
+    <isset name="sessionVar" value="${session.custom.sessionVar + 1}" scope="session" />
+    <isprint value="${sessionVar}" [style="INTEGER" ] />
+    ${session.custom.sessionVar}
+
+    <isset name="requestVar" value="false" scope="request" />
+    <isset name="requestVar" value="${session.custom.requestVar + 1}" scope="request" />
+    <isprint value="${requestVar}" />
+    ${request.custom.sessionVar}
+
+    <isset name="pageVar" value="${Hello}" scope="page" />
+    <isset name="pageVar" value="${pageVar + 1}" scope="page" />
+    <isprint value="${pageVar}" />
+
+    ${page.custom.sessionVar}
+</iscomment>
+<isset name="sessionVar" value="${1}" scope="session" />
+<p>${session.custom.sessionVar}</p>
+<isset name="requestVar" value="Hello" scope="request" />
+<p>${request.custom.requestVar}</p>
+<isset name="pageVarBool" value="${false}" scope="page" />
+<p>${pageVarBool}</p>
+
+<isset name="incrementVar" value="${1}" scope="session" />
+
+<p>${session.custom.incrementVar + 1}</p>
+
+<p>${pdict.test}</p>

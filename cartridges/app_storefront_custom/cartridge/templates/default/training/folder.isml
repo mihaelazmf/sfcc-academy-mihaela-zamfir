@@ -1,0 +1,6 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<isinclude template="/components/modules" />
+<isloop items="${pdict.assets}" var="asset_id">
+    <iscontentasset aid="${asset_id}" />
+</isloop>
