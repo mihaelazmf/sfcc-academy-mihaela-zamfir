@@ -14,7 +14,7 @@ viewData.example = "One String"
 
 res.setViewData(viewData);
 
-//res.render ('training/cart');
+res.render ('training/cart');
 
 return next ();
 });
