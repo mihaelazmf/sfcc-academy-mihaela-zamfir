@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <custom-type type-id="05121992">
+        <staging-mode>source-to-target</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="Birthday">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <group-definitions>
+            <attribute-group group-id="1992">
+                <display-name xml:lang="x-default">lala</display-name>
+                <attribute attribute-id="Birthday"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="NewsletterSubscription">
+        <display-name xml:lang="x-default">Newslatter</display-name>
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="email">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="firstName">
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lastName">
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="email"/>
+            <attribute-group group-id="firstName">
+                <display-name xml:lang="x-default">firstName</display-name>
+            </attribute-group>
+            <attribute-group group-id="lastName"/>
+        </group-definitions>
+    </custom-type>
+
+</metadata>
