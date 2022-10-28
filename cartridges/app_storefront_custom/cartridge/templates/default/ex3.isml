@@ -1,0 +1,5 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<div class="text-center">
+    <iscontentasset aid="New_Content_Asset" />
+</div>
