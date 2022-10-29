@@ -5598,6 +5598,45 @@ Sintonizzatore esterno ATSC DTB-H260F Samsung&lt;/div&gt;&#13;
         </custom-attributes>
     </content>
 
+    <content content-id="ex_5_asset">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;big&gt;Where does it come from?&lt;/big&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p style="margin-left: 40px;"&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. Allthe Lorem Ipsum generators on the internet tend to repeat predefined chunks as necessary, making this the first true generator on the internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum&lt;br /&gt;&#13;
+which looks reasonable.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ex_5_asset_title">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 style="text-align: center;"&gt;Footer Your Benefits Section&lt;/h1&gt;&#13;
+&lt;h2 style="text-align: center;"&gt;Where does it come from?&lt;/h2&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="student_guide_folder"/>
+        </folder-links>
+    </content>
+
+    <content content-id="exercise3">
+        <display-name xml:lang="x-default">ex 3</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&#13;
+&lt;p style="text-align: center;"&gt;Exercise 3 Assets&lt;/p&gt;&#13;
+&#13;
+&lt;p style="text-align: center;"&gt;&lt;img alt="" src="images/homepage/DesktopBannerImage/ex3.jpeg?$staticlink$" title="" /&gt;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
     <content content-id="f21da510024de04a5980bdfb72">
         <display-name xml:lang="x-default">Campaign Banner Component</display-name>
         <type>component.commerce_assets.campaignBanner</type>
@@ -6388,6 +6427,21 @@ Sintonizzatore esterno ATSC DTB-H260F Samsung&lt;/div&gt;&#13;
                 &lt;li&gt;&lt;a href="#" title="前往站点地图"&gt;站点地图&lt;/a&gt;&lt;/li&gt;&#13;
                 &lt;/ul&gt;&lt;!-- END: footer_support --&gt;</custom-attribute>
         </custom-attributes>
+    </content>
+
+    <content content-id="free_shipping">
+        <display-name xml:lang="x-default">free shipping over US$50.00</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 style="text-align: center;"&gt;Free shipping over US$50.00&lt;/h1&gt;&#13;
+&#13;
+&lt;p style="text-align:center"&gt;&lt;img alt="" src="images/homepage/DesktopBannerImage/ex3.jpeg?$staticlink$" title="" /&gt;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="top-nav"/>
+        </folder-links>
     </content>
 
     <content content-id="gift-additional-details">
