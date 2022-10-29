@@ -1,0 +1,258 @@
+<isdecorate template="common/layout/page">
+
+    <isinclude template="components/modules" />
+    <div id="title" />
+
+    <iscontentasset aid="title_shipping" />
+    <div class="form-group d-flex justify-content-center row">
+        <div class="col-5 ${pdict.profileForm.customer.firstname.mandatory === true ? 'required' : ''}">
+            <label class="form-control-label" for="firstName">
+                <isprint value="${pdict.profileForm.customer.firstname.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="firstName" <isprint
+                value="${pdict.profileForm.customer.firstname.attributes}" encoding="off" />>
+            <div class="invalid-feedback"></div>
+
+        </div>
+
+        <div class="col-5">
+            <label class=" form-control-label" for="lastName">
+                <isprint value="${pdict.profileForm.customer.lastname.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="lastName" <isprint
+                value="${pdict.profileForm.customer.lastname.attributes}" encoding="off" />>
+            <div class="invalid-feedback"></div>
+        </div>
+
+    </div>
+
+    <div class="form-group d-flex justify-content-center row">
+        <div class="col-10">
+            <label class="form-control-label" for="address1">
+                <isprint value="${pdict.profileForm.customer.address1.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="address1" <isprint
+                value="${pdict.profileForm.customer.address1.attributes}" encoding="off" />
+            autocomplete="address-line1">
+            <div class="invalid-feedback"></div>
+        </div>
+    </div>
+    <div class="form-group d-flex justify-content-center row">
+        <div class="col-10">
+            <label class="form-control-label" for="address2">
+                <isprint value="${pdict.profileForm.customer.address2.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="address2" <isprint
+                value="${pdict.profileForm.customer.address2.attributes}" encoding="off" />
+            autocomplete="billing address-line2">
+            <div class="invalid-feedback"></div>
+        </div>
+    </div>
+
+    <div class="form-group d-flex justify-content-center row">
+
+        <div class="col-5">
+            <div class="form-group
+                 ${pdict.profileForm.customer.country.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="country">
+                    <isprint value="${pdict.profileForm.customer.country.label}" encoding="htmlcontent" />
+                </label>
+                <select class="form-control" id="country" <isprint
+                    value="${pdict.profileForm.customer.country.attributes}" encoding="off" />
+                autocomplete="country">
+                <isloop items=${pdict.profileForm.customer.country.options} var="country">
+                    <option id="${country.id}" value="${country.htmlValue}" <isif condition="${country.selected}">
+                        selected</isif>>${country.label}</option>
+                </isloop>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <div class="form-group
+                 ${pdict.profileForm.customer.states.stateCode.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="state">
+                    <isprint value="${pdict.profileForm.customer.states.stateCode.label}" encoding="htmlcontent" />
+                </label>
+                <select class="form-control" id="state" <isprint
+                    value="${pdict.profileForm.customer.states.stateCode.attributes}" encoding="off" />
+                autocomplete="address-level1">
+                <isloop items=${pdict.profileForm.customer.states.stateCode.options} var="state">
+                    <option id="${state.id}" value="${state.htmlValue}" <isif condition="${state.selected}">
+                        selected</isif>>${state.label || ' '}</option>
+                </isloop>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group d-flex justify-content-center row">
+        <div class="col-5">
+            <div class="form-group
+                 ${pdict.profileForm.customer.postalCode.mandatory === true ? 'required' : ''}">
+                <label class="form-control-label" for="zipCode">
+                    <isprint value="${pdict.profileForm.customer.postalCode.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="zipCode" <isprint
+                    value="${pdict.profileForm.customer.postalCode.attributes}" encoding="off" />
+                autocomplete="postal-code">
+                <div class="invalid-feedback"></div>
+                <span>${Resource.msg('example.postalcode', 'forms', null)}</span>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <label class=" form-control-label" for="phone">
+                <isprint value="${pdict.profileForm.customer.phone.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="phone" <isprint
+                value="${pdict.profileForm.customer.phone.attributes}" encoding="off" />>
+            <div class="invalid-feedback"></div>
+            <span>${Resource.msg('example.phone', 'forms', null)}</span>
+        </div>
+    </div>
+
+
+    <div class="form-group d-flex justify-content-center row">
+        <div class="col-10">
+            <label class="form-control-label" for="comments">
+                <isprint value="${pdict.profileForm.customer.comments.label}" />
+            </label>
+            <input type="text" class="form-control" style="height: 150px; " id="comments" <isprint
+                value="${pdict.preofileForm.customer.comments.attributes}" />>
+            <div class="invalid-feedback"></div>
+        </div>
+
+    </div>
+
+    <iscontentasset aid="title_payment" />
+
+
+    <div class="form-group d-flex justify-content-center row">
+        <div class="col-10">
+            <div class="form-group">
+                <label class="form-control-label" for="cardNumber">${Resource.msg('field.credit.card.number', 'creditCard', null)}</label>
+                <div class="card-number-wrapper">
+                    <input type="text" class="form-control cardNumber" id="cardNumber">
+                    <isprint value=${creditFields.cardNumber.attributes} encoding="off" />
+                    <div class="invalid-feedback" id="cardNumberInvalidMessage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group d-flex justify-content-center row">
+        <div class="col-5">
+            <div class="form-group">
+                <label class="form-control-label"
+                    for="expirationMonth">${Resource.msg('field.credit.card.expiration.month', 'forms', null)}</label>
+                <select class="form-control expirationMonth custom-select" id="expirationMonth" <isprint
+                    value=${creditFields.expirationMonth.attributes} encoding="off" />
+                autocomplete="cc-exp-month"
+                aria-describedby="expirationMonthInvalidMessage">
+                <isloop items=${creditFields.customer.expirationMonth.options} var="month">
+                    <option id="${month.id}" value="${month.htmlValue}">
+                        ${month.label}
+                    </option>
+                </isloop>
+                </select>
+                <div class="invalid-feedback" id="expirationMonthInvalidMessage"></div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="form-group
+             <isif condition=${creditFields.expirationYear.mandatory === true}>required</isif>
+             ${creditFields.expirationYear.htmlName}">
+                <label class="form-control-label"
+                    for="expirationYear">${Resource.msg('field.credit.card.expiration.year', 'creditCard', null)}</label>
+                <select class="form-control expirationYear custom-select" id="expirationYear" <isprint
+                    value=${creditFields.expirationYear.attributes} encoding="off" />
+                autocomplete="cc-exp-year"
+                aria-describedby="expirationYearInvalidMessage">
+                <option value="${pdict.forms.billingForm.creditCardFields.expirationYear.options[0].htmlValue}">
+                    ${pdict.forms.billingForm.creditCardFields.expirationYear.options[0].label}</option>
+                <isloop items=${pdict.expirationYears} var="year">
+                    <option id="${year.toFixed(0)}" value="${year.toFixed(0)}">
+                        <isprint value="${year}" formatter="####" />
+                    </option>
+                </isloop>
+                </select>
+                <div class="invalid-feedback" id="expirationYearInvalidMessage"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group d-flex justify-content-center row">
+
+        <div class="col-5">
+            <label class="form-control-label" for="securityCode">${Resource.msg('field.credit.card.security.code', 'creditCard', null)}</label>
+
+            <button type="button" class="info-icon">
+                <span class="icon" aria-hidden="true">i</span>
+                <span class="sr-only">${Resource.msg('button.help.assistive.text', 'common', null)}</span>
+                <span class="tooltip d-none">
+                    ${Resource.msg('tooltip.security.code', 'creditCard', null)}
+                </span>
+            </button>
+
+            <input type="text" class="form-control securityCode" id="securityCode" <isprint
+                value=${creditFields.securityCode.attributes} encoding="off" />
+            aria-describedby="securityCodeInvalidMessage" >
+            <div class="invalid-feedback" id="securityCodeInvalidMessage"></div>
+        </div>
+
+        <div class="col-5">
+            <label class="form-control-label" for="email">
+                <isprint value="${pdict.profileForm.customer.email.label}" encoding="htmlcontent" />
+            </label>
+            <button type="button" class="info-icon">
+                <span class="icon" aria-hidden="true">i</span>
+                <span class="sr-only">${Resource.msg('button.help.assistive.text', 'forms', null)}</span>
+                <span class="tooltip d-none">
+                    ${Resource.msg('field.customer.email', 'forms', null)}
+                </span>
+            </button>
+            <input type="email" class="form-control" id="email" <isprint
+                value="${pdict.profileForm.customer.email.attributes}" encoding="off" />>
+            <div class="invalid-feedback"></div>
+        </div>
+
+
+    </div>
+
+    <div class="form-group d-flex row">
+        <div class="col">
+            <div class="save-credit-card custom-control custom-checkbox ">
+                <input type="checkbox" class="custom-control-input" id="saveCard" name="Save Card to Account"
+                    value="true" checked>
+                <label class="custom-control-label" for="saveCard">
+                    Save Card to Account
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group justify-content-center ml-5 pl-2 row">
+
+        <div class="col-9">
+            <button type="submit" name="save"
+                class="btn btn-save btn-block btn-primary">${Resource.msg('button.save.form', 'forms', null)}</button>
+        </div>
+
+
+        <div class="col-2">
+            <a href="#title">
+                <label for="">
+                    <span onClick="document.getElementById('middle').scrollIntoView();">
+                        <iscontentasset aid="training_upbutton" />
+                    </span>
+                </label>
+
+            </a>
+        </div>
+    </div>
+
+</isdecorate>

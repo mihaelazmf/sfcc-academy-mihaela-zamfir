@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+    <group formid="customer">
+        <field formid="firstname" label="label.input.firstname.profile" mandatory="true" max-length="50" missing-error="error.message.required" range-error="error.message.50orless" type="string" />
+
+        <field formid="lastname" label="label.input.lastname.profile" mandatory="true" max-length="50" missing-error="error.message.required" range-error="error.message.50orless" type="string" />
+
+        <field formid="email" label="label.input.email.profile" mandatory="true" max-length="50" missing-error="error.message.required" parse-error="error.message.parse.email.profile.form" range-error="error.message.50orless" regexp="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$" value-error="ValueErrorText" type="string"/>
+
+        <field formid="phone" label="label.input.phone.profile" mandatory="true" regexp="^\(?([2-9][0-8][0-9])\)?[\-\. ]?([2-9][0-9]{2})[\-\. ]?([0-9]{4})(\s*x[0-9]+)?$" missing-error="error.message.required" parse-error="error.message.parse.phone.profile.form" type="string"/>
+
+        <field formid="address1" label="label.input.address1" type="string" mandatory="true" binding="address1" max-length="50" missing-error="address.address1.missing" range-error="error.message.50orless"/>
+
+        <field formid="address2" label="label.input.address2" type="string" mandatory="false" binding="address2" max-length="50" range-error="error.message.50orless"/>
+
+        <field formid="postalCode" label="label.input.zipcode" type="string" mandatory="true" min-length="5" max-length="10" regexp="(^\d{5}(-\d{4})?$)|(^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Za-z]{1} *\d{1}[A-Za-z]{1}\d{1}$)" binding="postalCode" range-error="error.message.between5and10" missing-error="address.zipcode.missing" parse-error="error.message.parse.zip"/>
+
+        <field formid="comments" label="label.input.comments" type="string" mandatory="false" binding="comments" max-length="150" range-error="error.message.150orless"/>
+
+        <field formid="country" label="label.input.country" type="string" mandatory="true" binding="countryCode" missing-error="address.country.missing">
+            <options>
+                <option optionid="US" label="select.option.country.unitedstates" value="US"/>
+            </options>
+        </field>
+
+        <include formid="states" name="states" missing-error="address.state.missing" parse-error="error.message.required" value-error="error.message.required"/>
+
+        <field formid="cardNumber" label="label.input.creditcard.number" type="string" mandatory="true" binding="cardNumber" max-length="20" missing-error="payment.card.number.missing" parse-error="error.message.required" />
+
+        <field formid="expirationMonth" label="label.input.payment.expirationmonth" type="integer" mandatory="true" binding="expirationMonth" missing-error="payment.card.month.missing" value-error="address.field.invalid">
+            <options>
+                <option optionid="" label="select.default.month" value=""/>
+                <option optionid="01" label="01" value="01"/>
+                <option optionid="02" label="02" value="02"/>
+                <option optionid="03" label="03" value="03"/>
+                <option optionid="04" label="04" value="04"/>
+                <option optionid="05" label="05" value="05"/>
+                <option optionid="06" label="06" value="06"/>
+                <option optionid="07" label="07" value="07"/>
+                <option optionid="08" label="08" value="08"/>
+                <option optionid="09" label="09" value="09"/>
+                <option optionid="10" label="10" value="10"/>
+                <option optionid="11" label="11" value="11"/>
+                <option optionid="12" label="12" value="12"/>
+            </options>
+        </field>
+
+        <field formid="expirationYear" label="label.input.payment.expirationyear" type="integer" mandatory="true" missing-error="payment.card.year.missing">
+            <options>
+                <option optionid="" label="select.default.year" value=""/>
+            </options>
+        </field>
+
+        <field formid="saveCard" label="label.save.card" binding="saveCard" type="boolean" mandatory="false" checked="true" />
+
+
+    </group>
+
+
+</form>
