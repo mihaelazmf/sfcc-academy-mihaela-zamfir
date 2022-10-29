@@ -92,4 +92,7 @@
     <div class="container">
         <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
     </div>
+    <isif condition="${pdict.notes.lenght == 0}">
+        <h1> ${Resource.msg('info.cart.user.nonotes', 'cart', null)}</h1>
+    </isif>
 </isdecorate>
