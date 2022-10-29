@@ -7,14 +7,14 @@ server.extend (module.superModule)
 
 server.extend(controller)*/
 
-server.append ('HelloWorld', function (req, res, next){
+server.get ('HelloShow', function (req, res, next){
 var  viewData = res.getViewData();
 
 viewData.example = "One String"
 
 res.setViewData(viewData);
 
-res.render ('training/cart');
+res.render ('cart/cart');
 
 return next ();
 });

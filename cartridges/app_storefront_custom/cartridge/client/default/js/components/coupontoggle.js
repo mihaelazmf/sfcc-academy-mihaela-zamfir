@@ -1,7 +1,7 @@
 'use strict';
 $(".promo-code-form").hide();
 
- $(".couponCodeFormShow").on("click", function() {
+ $(".couponShowCode").on("click", function() {
      $(".promo-code-form").show();
-     $(".couponCodeFormShow").hide();
+     $(".couponShowCode").hide();
  });

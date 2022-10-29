@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-12">
         <div style="cursor: pointer;">
-            <span class="couponCodeFormShow">${Resource.msg('label.promo.code.toggle', 'cart', null)}</span>
+            <span class="couponShowCode">${Resource.msg('Click Here if you have a coupon code', 'cart', null)}</span>
         </div>
         <form action="${pdict.actionUrls.submitCouponCodeUrl}" class="promo-code-form" method="GET"
             name="promo-code-form">
